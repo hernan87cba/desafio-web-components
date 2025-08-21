@@ -70,6 +70,15 @@ function createContactForm(formContainerEl) {
         contactFormEl.reset();
         enviarEl.disabled = true;
       })
-      .catch((error) => console.error("Error:", error));
+      .catch((error) => {
+        console.error("Error:", error);
+        let result = confirm(
+          "Ocurrió un error inesperado, ¿desea volver a intentarlo?"
+        );
+        if (!result) {
+          contactFormEl.reset();
+          enviarEl.disabled = true;
+        }
+      });
   });
 }
