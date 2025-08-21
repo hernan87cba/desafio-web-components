@@ -1,0 +1,271 @@
+* {
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+  min-width: 375px;
+}
+
+/*----------------------Fonts-------------------------------------------*/
+.poppins-regular {
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.poppins-medium {
+  font-family: "Poppins", sans-serif;
+  font-weight: 500;
+  font-style: normal;
+}
+
+.poppins-bold {
+  font-family: "Poppins", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+}
+
+/*-----------------------------------------------------------------------*/
+.bienvenida-section {
+  background-color: #13171c;
+  height: 741px;
+}
+
+@media (min-width: 768px) {
+  .bienvenida-section {
+    height: 1024px;
+  }
+}
+
+.bienvenida__container {
+  width: 100%;
+  height: 627px;
+  padding: 95px 43px 138px 44px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  gap: 33px;
+}
+
+@media (min-width: 768px) {
+  .bienvenida__container {
+    height: 892px;
+    /*Porcentajes de padding lateral (230px y 171px) con respecto al ancho del diseño (1440px)*/
+    padding: 210px 16% 162px 12%;
+    flex-direction: row;
+    gap: 50px;
+  }
+}
+
+.bienvenida__title-div {
+  width: 100%;
+  height: 150px;
+}
+
+@media (min-width: 768px) {
+  .bienvenida__title-div {
+    height: 520px;
+  }
+}
+
+.bienvenida__title-white {
+  font-size: 60px;
+  margin: 0;
+  text-align: center;
+  color: white;
+  line-height: 75px;
+}
+@media (min-width: 768px) {
+  .bienvenida__title-white {
+    font-size: clamp(5rem, 3.5rem + 3.125vw, 6rem);
+    line-height: 96px;
+    text-align: left;
+  }
+}
+
+.bienvenida__title-cyan {
+  font-size: 60px;
+  margin: 0;
+  text-align: center;
+  color: #00adb5;
+  line-height: 75px;
+}
+@media (min-width: 768px) {
+  .bienvenida__title-cyan {
+    font-size: clamp(5rem, 3.5rem + 3.125vw, 6rem);
+    line-height: 96px;
+    text-align: left;
+  }
+}
+
+.bienvenida__img-div {
+  height: 520px;
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+}
+
+.bienvenida__img {
+  width: 211px;
+  height: 211px;
+}
+
+@media (min-width: 768px) {
+  .bienvenida__img {
+    width: clamp(13.6875rem, 1.125rem + 26.171875vw, 22.0625rem);
+    height: auto;
+  }
+}
+
+.bienvenida__img-shadow {
+  display: none;
+}
+@media (min-width: 768px) {
+  .bienvenida__img-shadow {
+    display: inherit;
+    width: clamp(
+      13.6875rem,
+      1.125rem + 26.171875vw,
+      22.0625rem
+    ); /*Mismo ancho que la imagen*/
+    height: 50px;
+    background-color: #00000080;
+    border-radius: 100% 100%;
+  }
+}
+
+.servicios-section {
+  max-height: 1777px;
+  background: repeat url("../images/background.png") #13171c;
+  padding: 77px 25px 55px 24px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 25px;
+}
+
+@media (min-width: 768px) {
+  .servicios-section {
+    max-height: 800px;
+    padding-top: 104px;
+    padding-left: clamp(1rem, -7.64rem + 18vw, 8.5rem);
+    padding-right: clamp(1rem, -7.64rem + 18vw, 8.5rem);
+    padding-bottom: 76px;
+  }
+}
+
+.servicios-section.expanded {
+  max-height: max-content;
+}
+
+.cards__container,
+.cards__container-extra {
+  width: 100%;
+  max-height: 1600px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 48px;
+}
+
+.cards__container-extra {
+  margin-top: 48px;
+  display: none;
+}
+
+@media (min-width: 768px) {
+  .cards__container,
+  .cards__container-extra {
+    height: 532px;
+    flex-direction: row;
+    gap: 5px;
+    align-items: flex-start;
+  }
+}
+
+.ver-mas-btn {
+  width: 129px;
+  height: 47px;
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  font-size: 18px;
+  color: #eeeeee;
+  background-color: transparent;
+  border: none;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 0;
+}
+
+@media (min-width: 768px) {
+  .ver-mas-btn {
+    width: 154px;
+    height: 56px;
+    font-size: 24px;
+  }
+}
+
+.ver-mas-btn::before {
+  content: "";
+  width: 24px;
+  height: 24px;
+  background-image: url("../images/verMas.png");
+}
+
+.ver-mas-btn:hover,
+.ver-menos-btn:hover {
+  cursor: pointer;
+}
+
+.ver-menos-btn {
+  width: 140px;
+  height: 47px;
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  font-size: 18px;
+  color: #eeeeee;
+  background-color: transparent;
+  border: none;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 0;
+}
+
+@media (min-width: 768px) {
+  .ver-menos-btn {
+    width: 170px;
+    height: 56px;
+    font-size: 24px;
+  }
+}
+
+.ver-menos-btn::before {
+  content: "";
+  width: 24px;
+  height: 24px;
+  background-image: url("../images/verMenos.png");
+}
+
+.footer-section {
+  height: 534px;
+  background-color: #0f1113;
+  width: 100%;
+  padding: 79px 67px;
+}
+@media (min-width: 768px) {
+  .footer-section {
+    height: 497px;
+    background-color: #13171c;
+    /*Porcentaje de padding en el diseño (82px) con respecto al ancho de la pantalla (1440px)*/
+    padding: 41px 5.69% 56px 5.69%;
+    display: flex;
+    justify-content: center;
+  }
+}
